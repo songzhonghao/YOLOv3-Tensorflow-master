@@ -1,0 +1,4 @@
+1，首先运行voc_label.py，生成对应的train.txt、text.txt以及val.txt
+2，设置config参数，运行train.py进行训练，此时在checkpoint中的文件特别大，是正常的
+3，运行freeze_graph.py，生成pb文件，这个才是权重文件，可以在image_demo.py中测试图片
+4，运行evaluation.py求map，此时所用权重为checkpoint中的.ckpt.meta文件
